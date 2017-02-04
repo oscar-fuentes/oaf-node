@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/oscar-fuentes/oaf-node/issues"
   },
-  "homepage": "https://github.com/oscar-fuentes/oaf-node#readme"
+  "homepage": "https://github.com/oscar-fuentes/oaf-node#readme",
+  "dependencies": {
+    "@types/jasmine": "^2.5.41",
+    "@types/node": "^7.0.5",
+    "commonjs": "0.0.1",
+    "jasmine-core": "^2.5.2",
+    "jasmine-node": "^1.14.5",
+    "typescript": "^2.1.5"
+  }
 }
