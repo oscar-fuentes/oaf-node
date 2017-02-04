@@ -1,4 +1,6 @@
 "use strict";
+var configuration_1 = require("./configuration");
+exports.OAFConfiguration = configuration_1.OAFConfiguration;
 var error_1 = require("./error");
 exports.OAFError = error_1.OAFError;
 var model_1 = require("./model");
