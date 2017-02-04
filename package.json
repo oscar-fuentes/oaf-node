@@ -4,6 +4,7 @@
   "description": "Client-facing Node.js module which enables interaction with an oaf-server.",
   "main": "built/lib/index.js",
   "scripts": {
+    "compile": "./bin/compile.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
