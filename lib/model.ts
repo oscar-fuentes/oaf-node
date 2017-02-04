@@ -1,3 +1,5 @@
+import { OAFQuery } from "./index";
+
 export abstract class OAFModel {
 
     public readonly create_date?    : Date;
@@ -9,5 +11,9 @@ export abstract class OAFModel {
     }
 
     public abstract name()          : String;
+
+    public static query<T extends OAFModel>(this: { new (): T }): OAFQuery<T> {
+        return new OAFQuery<T>();
+    }
 
 }
