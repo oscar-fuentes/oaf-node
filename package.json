@@ -2,7 +2,7 @@
   "name": "oaf-node",
   "version": "1.0.0",
   "description": "Client-facing Node.js module which enables interaction with an oaf-server.",
-  "main": "index.js",
+  "main": "built/lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
