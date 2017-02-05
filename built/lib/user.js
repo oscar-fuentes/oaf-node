@@ -5,7 +5,7 @@ var OAFUser = (function () {
     OAFUser.prototype.name = function () {
         return "OAFUser";
     };
-    OAFUser.logIn = function (user) {
+    OAFUser.logIn = function (options) {
         return Promise.reject(null);
     };
     OAFUser.signUp = function (user) {

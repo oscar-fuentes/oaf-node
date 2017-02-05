@@ -6,7 +6,11 @@ export class OAFUser {
         return "OAFUser";
     }
 
-    public static logIn(user: OAFUser): Promise<void> {
+    public static logIn(options: {
+        emailAddress?   : string,
+        password        : string,
+        telephone?      : string,
+        username?       : string }): Promise<void> {
         return Promise.reject(null);
     }
 

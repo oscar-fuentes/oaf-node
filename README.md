@@ -108,6 +108,17 @@ query
 
 ### Class `OAFUser`
 
+### Static Methods
+
+* `logIn(options)` - .
+    * `options {object}` - .
+        * `emailAddress {string} [emailAddress]` - .
+        * `password {string}` - .
+        * `telephone {string} [telephone]` - .
+        * `username {string} [username]` - .
+* `signUp(user)` - .
+    * `user {OAFUser}` - .
+
 ## Author
 
 * Oscar Fuentes
