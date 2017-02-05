@@ -95,7 +95,8 @@ query
     .execute()
     .then(models => {
         /**
-         * The query executed successfully
+         * The query executed successfully.
+         * `models` is an array of `TestModel`.
          */
     })
     .catch(error => {
