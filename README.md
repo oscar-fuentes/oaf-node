@@ -4,6 +4,7 @@
 
 * [Introduction](#introduction)
 * [Installation](#installation)
+* [Configuration](#configuration)
 * [Author](#author)
 * [License](#license)
 * [Donation](#donation)
@@ -31,6 +32,18 @@ You can also add it as a dependency to your package.json file and run `npm insta
 ```
 
 This installs both the JavaScript and the [TypeScript][TypeScript] version of this dependency.
+
+## Configuration
+
+Here is a basic [TypeScript][TypeScript] example configuring this module:
+
+```typescript
+import { OAFConfiguration } from "oaf-node";
+
+OAFConfiguration.shared.adminKey    = "1234567890";
+OAFConfiguration.shared.apiKey      = "0987654321";
+OAFConfiguration.shared.uri         = "http://localhost:8080";
+```
 
 ## Author
 
