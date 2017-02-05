@@ -11,7 +11,7 @@ describe("OAFQuery", () => {
         OAFConfiguration.shared.uri         = TestConstant.uri;
     });
 
-    it("cannot execute with an apiKey", (done) => {
+    it("cannot execute without an apiKey", (done) => {
         OAFConfiguration.shared.apiKey      = null;
 
         let query                           = TestModel.query();

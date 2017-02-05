@@ -10,7 +10,7 @@ var TestModel = (function (_super) {
     function TestModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    TestModel.prototype.name = function () {
+    TestModel.prototype.table = function () {
         return "TestModel";
     };
     return TestModel;

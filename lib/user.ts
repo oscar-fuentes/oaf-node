@@ -2,7 +2,7 @@ import { OAFModel } from "./index";
 
 export class OAFUser {
 
-    public name(): string {
+    public table(): string {
         return "OAFUser";
     }
 

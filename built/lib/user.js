@@ -2,7 +2,7 @@
 var OAFUser = (function () {
     function OAFUser() {
     }
-    OAFUser.prototype.name = function () {
+    OAFUser.prototype.table = function () {
         return "OAFUser";
     };
     OAFUser.logIn = function (options) {

@@ -10,7 +10,7 @@ export abstract class OAFModel {
 
     }
 
-    public abstract name()          : string;
+    public abstract table()         : string;
 
     public static query<T extends OAFModel>(this: { new (): T }): OAFQuery<T> {
         return new OAFQuery<T>();
