@@ -1,7 +1,7 @@
 {
   "name": "oaf-node",
   "version": "1.0.0",
-  "description": "Client-facing Node.js module which enables interaction with an oaf-server.",
+  "description": "Client-facing Node.js module which enables interaction with an OAFServer.",
   "main": "built/lib/index.js",
   "scripts": {
     "test": "./bin/test.sh",
