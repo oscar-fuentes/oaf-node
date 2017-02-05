@@ -6,7 +6,11 @@
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Documentation](#documentation)
+    * [OAFConfiguration](#class-oafconfiguration)
+    * [OAFError](#enum-oaferror)
+    * [OAFModel](#class-oafmodel)
     * [OAFQuery](#class-oafqueryt-extends-oafmodel)
+    * [OAFUser](#class-oafuser)
 * [Author](#author)
 * [License](#license)
 * [Donation](#donation)
@@ -49,6 +53,12 @@ OAFConfiguration.shared.uri         = "http://localhost:8080";
 
 ## Documentation
 
+### Class `OAFConfiguration`
+
+### Enum `OAFError`
+
+### Class `OAFModel`
+
 ### Class `OAFQuery<T extends OAFModel>`
 
 #### Initializers
@@ -60,6 +70,8 @@ OAFConfiguration.shared.uri         = "http://localhost:8080";
 #### Instance Methods
 
 * `execute(): Promise<T[]>`
+
+### Class `OAFUser`
 
 ## Author
 
