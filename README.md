@@ -5,6 +5,8 @@
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Configuration](#configuration)
+* [Documentation](#documentation)
+    * [OAFQuery](#class-oafquery)
 * [Author](#author)
 * [License](#license)
 * [Donation](#donation)
@@ -38,12 +40,26 @@ This installs both the JavaScript and the [TypeScript][TypeScript] version of th
 Here is a basic [TypeScript][TypeScript] example configuring this module:
 
 ```typescript
-import { OAFConfiguration } from "oaf-node";
+import { OAFConfiguration }         from "oaf-node";
 
 OAFConfiguration.shared.adminKey    = "1234567890";
 OAFConfiguration.shared.apiKey      = "0987654321";
 OAFConfiguration.shared.uri         = "http://localhost:8080";
 ```
+
+## Documentation
+
+### Class `OAFQuery<T extends OAFModel>`
+
+#### Initializers
+
+* `init()`
+
+#### Instance Variables
+
+#### Instance Methods
+
+* `execute(): Promise<T[]>`
 
 ## Author
 
