@@ -1,6 +1,8 @@
 import { OAFModel } from "./index";
 
-export class OAFUser {
+export class OAFUser extends OAFModel {
+
+    public static local: OAFUser;
 
     public table(): string {
         return "OAFUser";
@@ -14,8 +16,16 @@ export class OAFUser {
         return Promise.reject(null);
     }
 
-    public static signUp(user: OAFUser): Promise<void> {
-        return Promise.reject(null);
+    public static signUp(user: OAFUser): Promise<OAFUser> {
+        return user
+            .save()
+            .then(user => {
+                OAFUser.local = user;
+                return Promise.resolve(user);
+            })
+            .catch(error => {
+                return Promise.reject(error);
+            });
     }
 
 }
