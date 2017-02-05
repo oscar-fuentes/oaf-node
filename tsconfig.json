@@ -11,7 +11,8 @@
         "outDir": "./built/",
         "types": [
             "jasmine",
-            "node"
+            "node",
+            "request"
         ]
     }
 }

@@ -1,5 +1,6 @@
 export enum OAFError {
 
-    missingApplicationIdentifier
+    missingApiKey,
+    missingUrl
 
 }
