@@ -81,6 +81,30 @@ The following values are available:
 
 * `execute(): Promise<T[]>`
 
+#### Example
+
+Here is a full-fledged [TypeScript][TypeScript] example utilizing `OAFQuery`:
+
+```typescript
+/**
+ * `TestModel` is a hypothetical subclass of `OAFModel`
+ */
+let query = TestModel.query();
+
+query
+    .execute()
+    .then(models => {
+        /**
+         * The query executed successfully
+         */
+    })
+    .catch(error => {
+        /**
+         * An error occurred
+         */
+    });
+```
+
 ### Class `OAFUser`
 
 ## Author
