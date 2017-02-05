@@ -6,4 +6,12 @@ export class OAFUser {
         return "OAFUser";
     }
 
+    public static logIn(user: OAFUser): Promise<void> {
+        return Promise.reject(null);
+    }
+
+    public static signUp(user: OAFUser): Promise<void> {
+        return Promise.reject(null);
+    }
+
 }

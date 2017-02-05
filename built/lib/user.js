@@ -5,6 +5,12 @@ var OAFUser = (function () {
     OAFUser.prototype.name = function () {
         return "OAFUser";
     };
+    OAFUser.logIn = function (user) {
+        return Promise.reject(null);
+    };
+    OAFUser.signUp = function (user) {
+        return Promise.reject(null);
+    };
     return OAFUser;
 }());
 exports.OAFUser = OAFUser;
