@@ -6,7 +6,7 @@
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Documentation](#documentation)
-    * [OAFQuery](#class-oafquery)
+    * [OAFQuery](#class-oafqueryt-extends-oafmodel)
 * [Author](#author)
 * [License](#license)
 * [Donation](#donation)
