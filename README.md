@@ -17,7 +17,7 @@
 
 ## Introduction
 
-Client-facing Node.js module which enables interaction with an oaf-server.
+Client-facing Node.js module which enables interaction with an [OAFServer][OAFServer].
 
 ## Installation
 
@@ -55,6 +55,11 @@ OAFConfiguration.shared.uri         = "http://localhost:8080";
 
 ### Class `OAFConfiguration`
 
+* `shared {OAFConfiguration}` - The shared module-level configuration instance.
+* `adminKey {String} [adminKey]` - The administrative key for server-side access.
+* `apiKey {String} [apiKey]` - The API key for server-side access.
+* `uri {String} [uri]` - The URI of the [OAFServer][OAFServer].
+
 ### Enum `OAFError`
 
 ### Class `OAFModel`
@@ -85,5 +90,6 @@ This project is licensed under the [Apache-2.0](LICENSE).
 
 This module was built on trains, ferries, and in the wee hours of the night, so if it served you any purpose, please consider paying for my next cup of coffee via [PayPal][PayPal] :)
 
-[TypeScript]: https://www.typescriptlang.org/
 [PayPal]: https://www.paypal.me/oscarfuentes/1
+[OAFServer]: https://github.com/oscar-fuentes/oaf-server
+[TypeScript]: https://www.typescriptlang.org/
