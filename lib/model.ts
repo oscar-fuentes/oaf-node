@@ -31,6 +31,9 @@ export abstract class OAFModel {
             error   = OAFError.missingUri;
         }
 
+        uri         += this.table() === "OAFUser" ? "/user" : "/model";
+        uri         += this.identifier ? "/update" : "/create";
+
         if (error) {
             return Promise.reject(error);
         } else {

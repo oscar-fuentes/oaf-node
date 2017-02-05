@@ -17,6 +17,8 @@ var OAFModel = (function () {
         if (!uri) {
             error = index_1.OAFError.missingUri;
         }
+        uri += this.table() === "OAFUser" ? "/user" : "/model";
+        uri += this.identifier ? "/update" : "/create";
         if (error) {
             return Promise.reject(error);
         }
