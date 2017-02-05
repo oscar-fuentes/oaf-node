@@ -25,7 +25,7 @@ export class OAFQuery<T extends OAFModel> {
                 });
 
             } else {
-                return Promise.reject(OAFError.missingUrl);
+                return Promise.reject(OAFError.missingUri);
             }
         } else {
             return Promise.reject(OAFError.missingApiKey);

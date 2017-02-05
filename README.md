@@ -62,6 +62,11 @@ OAFConfiguration.shared.uri         = "http://localhost:8080";
 
 ### Enum `OAFError`
 
+The following values are available:
+
+* `missingApiKey` - The configuration's `apiKey` has not been set.
+* `missingUri` - The configuration's `uri` has not been set.
+
 ### Class `OAFModel`
 
 ### Class `OAFQuery<T extends OAFModel>`

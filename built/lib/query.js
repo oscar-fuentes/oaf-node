@@ -23,7 +23,7 @@ var OAFQuery = (function () {
                 });
             }
             else {
-                return Promise.reject(index_1.OAFError.missingUrl);
+                return Promise.reject(index_1.OAFError.missingUri);
             }
         }
         else {
