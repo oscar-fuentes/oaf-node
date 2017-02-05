@@ -14,7 +14,7 @@ describe("OAFQuery", () => {
     it("cannot execute with an apiKey", (done) => {
         OAFConfiguration.shared.apiKey      = null;
 
-        let query = TestModel.query();
+        let query                           = TestModel.query();
 
         query
             .execute()
