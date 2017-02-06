@@ -20,17 +20,19 @@ describe("OAFUser", function () {
             expect(error).toBe(index_1.OAFError.missingApiKey);
             done();
         });
-        // let query                           = TestModel.query();
-        //
-        // query
-        //     .execute()
-        //     .then(models => {
-        //         expect(true).toBe(false);
-        //         done();
-        //     })
-        //     .catch(error => {
-        //         expect(error).toBe(OAFError.missingApiKey);
-        //         done();
-        //     });
+    });
+    it("can sign up", function (done) {
+        var user = new index_1.OAFUser();
+        user.age = 23;
+        index_1.OAFUser
+            .signUp(user)
+            .then(function () {
+            expect(true).toBe(true);
+            done();
+        })
+            .catch(function (error) {
+            expect(true).toBe(false);
+            done();
+        });
     });
 });

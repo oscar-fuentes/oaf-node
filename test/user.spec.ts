@@ -25,19 +25,22 @@ describe("OAFUser", () => {
                 expect(error).toBe(OAFError.missingApiKey);
                 done();
             });
+    });
 
-        // let query                           = TestModel.query();
-        //
-        // query
-        //     .execute()
-        //     .then(models => {
-        //         expect(true).toBe(false);
-        //         done();
-        //     })
-        //     .catch(error => {
-        //         expect(error).toBe(OAFError.missingApiKey);
-        //         done();
-        //     });
+    it("can sign up", (done) => {
+        let user = new OAFUser();
+        user.age = 23;
+
+        OAFUser
+            .signUp(user)
+            .then(() => {
+                expect(true).toBe(true);
+                done();
+            })
+            .catch(error => {
+                expect(true).toBe(false);
+                done();
+            });
     });
 
 });

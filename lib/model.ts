@@ -13,6 +13,10 @@ export abstract class OAFModel {
 
     public abstract table()         : string;
 
+    public get json()               : any {
+        return JSON.parse(JSON.stringify(this));
+    }
+
     public static query<T extends OAFModel>(this: { new (): T }): OAFQuery<T> {
         return new OAFQuery<T>();
     }
@@ -31,25 +35,36 @@ export abstract class OAFModel {
             error   = OAFError.missingUri;
         }
 
+        uri         += "/api";
         uri         += this.table() === "OAFUser" ? "/user" : "/model";
         uri         += this.identifier ? "/update" : "/create";
 
         if (error) {
             return Promise.reject(error);
         } else {
-            Request.post(uri, null, (error: any, response: Request.RequestResponse, body: any) => {
-                if (error) {
-                    return Promise.reject(error);
-                } else {
-                    if (response.statusCode === 200) {
-                        return Promise.resolve([]);
-                    } else {
-                        return Promise.reject("Something went wrong.");
-                    }
+            let json    = this.json;
+            let options  = {
+                form    : json,
+                headers : {
+                    "OAF-API-Authorization-Code"    : apiKey,
+                    "Content-Type"                  : "application/json"
                 }
-            });
+            };
 
-            return Promise.resolve(this);
+            return new Promise((resolve, reject) => {
+                Request.post(uri, options, (error: any, response: Request.RequestResponse, body: any) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        console.log(body);
+                        if (response.statusCode === 200) {
+                            resolve(body.data as this);
+                        } else {
+                            reject("Something went wrong.");
+                        }
+                    }
+                });
+            });
         }
     }
 

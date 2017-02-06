@@ -4,6 +4,13 @@ var index_1 = require("./index");
 var OAFModel = (function () {
     function OAFModel() {
     }
+    Object.defineProperty(OAFModel.prototype, "json", {
+        get: function () {
+            return JSON.parse(JSON.stringify(this));
+        },
+        enumerable: true,
+        configurable: true
+    });
     OAFModel.query = function () {
         return new index_1.OAFQuery();
     };
@@ -17,26 +24,37 @@ var OAFModel = (function () {
         if (!uri) {
             error = index_1.OAFError.missingUri;
         }
+        uri += "/api";
         uri += this.table() === "OAFUser" ? "/user" : "/model";
         uri += this.identifier ? "/update" : "/create";
         if (error) {
             return Promise.reject(error);
         }
         else {
-            Request.post(uri, null, function (error, response, body) {
-                if (error) {
-                    return Promise.reject(error);
+            var json = this.json;
+            var options_1 = {
+                form: json,
+                headers: {
+                    "OAF-API-Authorization-Code": apiKey,
+                    "Content-Type": "application/json"
                 }
-                else {
-                    if (response.statusCode === 200) {
-                        return Promise.resolve([]);
+            };
+            return new Promise(function (resolve, reject) {
+                Request.post(uri, options_1, function (error, response, body) {
+                    if (error) {
+                        reject(error);
                     }
                     else {
-                        return Promise.reject("Something went wrong.");
+                        console.log(body);
+                        if (response.statusCode === 200) {
+                            resolve(body.data);
+                        }
+                        else {
+                            reject("Something went wrong.");
+                        }
                     }
-                }
+                });
             });
-            return Promise.resolve(this);
         }
     };
     return OAFModel;

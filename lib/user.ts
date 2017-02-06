@@ -2,7 +2,9 @@ import { OAFModel } from "./index";
 
 export class OAFUser extends OAFModel {
 
-    public static local: OAFUser;
+    public static local : OAFUser;
+
+    public age          : number;
 
     public table(): string {
         return "OAFUser";
