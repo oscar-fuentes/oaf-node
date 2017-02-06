@@ -56,7 +56,6 @@ export abstract class OAFModel {
                     if (error) {
                         reject(error);
                     } else {
-                        console.log(body);
                         if (response.statusCode === 200) {
                             resolve(body.data as this);
                         } else {

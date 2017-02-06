@@ -45,7 +45,6 @@ var OAFModel = (function () {
                         reject(error);
                     }
                     else {
-                        console.log(body);
                         if (response.statusCode === 200) {
                             resolve(body.data);
                         }
